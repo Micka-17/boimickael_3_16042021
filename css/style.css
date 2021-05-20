@@ -442,6 +442,8 @@ img {
   opacity: 0;
   background: linear-gradient(0deg, #9356dc, #ff79da);
   background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
   right: 15px;
@@ -460,6 +462,8 @@ img {
   opacity: 0;
   background: linear-gradient(0deg, #9356dc, #ff79da);
   background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
   right: 8px;
