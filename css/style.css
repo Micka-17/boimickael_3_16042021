@@ -276,19 +276,18 @@ li #number3 {
 .imga {
   object-fit: cover;
   border-radius: 10px 10px 0px 0px;
-  max-width: 280px;
   min-width: 280px;
   max-height: 140px;
   min-height: 140px;
 }
 @media (min-width: 375px) {
   .imga {
-    min-width: 350px;
+    min-width: 100%;
   }
 }
 @media (min-width: 414px) {
   .imga {
-    min-width: 380px;
+    min-width: 100%;
   }
 }
 
