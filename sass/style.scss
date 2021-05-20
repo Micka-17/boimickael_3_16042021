@@ -1,89 +1,16 @@
-$color1: #9356DC;
-$color2: #FF79DA;
-$color3: #99E2D0;
+@import "./directories/Utils/variables-mixin";
+@import "./directories/Base/main.scss";
 
-@mixin centre {
-    display: flex;
-    justify-content: space-between;
-}
 
-@mixin capsule {
-    background-color: whitesmoke;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 1px rgb(226, 226, 226);
-    margin: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
- @mixin spacediv {
-    min-height: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 8px;
- }
-@mixin btn {
-    background: linear-gradient($color2, $color1);
-    border-radius: 50px;
-    border: none;
-    box-shadow: gray;
-    color: white;
-    font-weight: bold;
-    max-width: 200px;
-    min-width: 200px;
-    margin-top: 15px;
-    padding: 15px 10px;
-    text-align: center;
-    text-decoration: none
-}
 
-@keyframes fadein {
-    from {
-        transform: scaleX(0);
+ul {
+    @media (min-width: 430px) {
+        max-width: 450px;
     }
-
-    to {
-        transform: scaleX(1);
-    }
-}
-
-@keyframes fadeout {
-    from {
-        transform: scaleY(0);
-    }
-
-    to {
-        transform: scaleY(1);
-    }
-}
-@keyframes fadeout2 {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1.5);
-    }
-}
-
-@keyframes spin { 
-    from { 
-        transform: rotate(0deg); 
-    } to { 
-        transform: rotate(360deg); 
-    }
-}
-
-@keyframes slideup {
-    from {
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+        @media (min-width: 1000px) {
+            display: flex;
+            min-width: 100%;
+        }
 }
 
 #loader {
@@ -102,60 +29,6 @@ $color3: #99E2D0;
     animation-delay: 0.5s;
     animation-fill-mode: both;
   }
-  
- @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg);
-        opacity: 10%;
-      }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-@keyframes loader {
-    95% {
-    opacity: 10%;
-    }
-    85% {
-        opacity: 50%;
-    }
-    100% {
-        opacity: 0;
-        z-index: -1000;
-    }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none; 
-    font-family: 'Roboto', sans-serif;
-}
-h1 h2 h3 h4 {
-    font-family: 'Shrikhand', cursive;
-}
-a {
-    text-decoration: none;
-    list-style: none;
-    color: rgb(0, 0, 0);
-}
-
-ul {
-    @media (min-width: 430px) {
-        max-width: 450px;
-    }
-        @media (min-width: 1000px) {
-            display: flex;
-            min-width: 100%;
-        }
-}
 
 #contact {
     color: white;
@@ -196,12 +69,13 @@ ul {
     padding-bottom: 45px;
         #btn {
             @include btn();
+                &:hover {
+                    filter: brightness(1.10);
+                    box-shadow: 0px 0px 10px 5px gray;
+                }
         }
 }
-#btn:hover, #btnp2:hover {
-    filter: brightness(1.10);
-    box-shadow: 0px 0px 10px 5px gray;
-}
+
 #center-top1 {
     text-align: center;
     margin-top: 20px;
@@ -241,7 +115,7 @@ li {
     box-shadow: 1px 1px 10px 1px rgb(151, 145, 145);
         #number1 {
             position: absolute;
-            top: 465px; 
+            top: 462px; 
             left: 10px;
             background-color: $color1;
             border-radius: 50px;
@@ -249,13 +123,13 @@ li {
             font-size: 0.8em;
             color: white;
                 @media (min-width: 1000px) {
-                    top: 476px; 
+                    top: 472px; 
                     left: 10px;
                 }
         }
             #number2 {
                 position: absolute;
-                top: 538px; 
+                top: 534px; 
                 left: 10px;
                 background-color: $color1;
                 border-radius: 50px;
@@ -263,13 +137,13 @@ li {
                 font-size: 0.8em;
                 color: white;
                     @media (min-width: 1000px) {
-                        top: 476px; 
-                        left: 302px;
+                        top: 472px; 
+                        left: 285px;
                     }
             }  
                 #number3 {
                     position: absolute;
-                    top: 612px;
+                    top: 607px;
                     left: 10px;
                     background-color: $color1;
                     border-radius: 50px;
@@ -277,8 +151,8 @@ li {
                     font-size: 0.8em;
                     color: white;
                         @media (min-width: 1000px) {
-                            top: 476px;
-                            left: 588px;
+                            top: 472px;
+                            left: 553px;
                         }
                 }
 }
@@ -545,6 +419,10 @@ img {
 #btnp2 {
     @include btn();
     margin-top: 30px;
+        &:hover {
+            filter: brightness(1.10);
+            box-shadow: 0px 0px 10px 5px gray;
+        }
 }
 
 #placement-btn {
