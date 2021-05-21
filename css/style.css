@@ -33,7 +33,7 @@
 }
 @keyframes slideup {
   from {
-    transform: translateY(10px);
+    transform: translateY(50px);
     opacity: 0;
   }
   to {
@@ -65,6 +65,20 @@
     z-index: -1000;
   }
 }
+@keyframes loader2 {
+  0% {
+    opacity: 100%;
+    z-index: 9999;
+  }
+  99% {
+    opacity: 0;
+    z-index: -1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1000;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -88,6 +102,10 @@ a {
   color: black;
 }
 
+ul {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+}
 @media (min-width: 430px) {
   ul {
     max-width: 450px;
@@ -98,6 +116,17 @@ a {
     display: flex;
     min-width: 100%;
   }
+}
+
+#backgroundloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #99E2D0;
+  min-width: 100%;
+  height: 100vh;
+  animation: loader2 5s;
+  animation-fill-mode: both;
 }
 
 #loader {
@@ -113,7 +142,7 @@ a {
   border: 6px solid white;
   border-color: #9356DC transparent #FF79DA transparent;
   animation: lds-dual-ring 0.8s infinite, loader 3s;
-  animation-delay: 0.5s;
+  animation-delay: 0.2s;
   animation-fill-mode: both;
 }
 
@@ -121,10 +150,11 @@ a {
   color: white;
 }
 
-.responsive p {
+.spacediv p {
+  font-family: "Roboto", sans-serif;
+  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 #logo {
@@ -409,15 +439,10 @@ img {
   box-shadow: 1px 1px 10px 1px #e2e2e2;
   margin: 10px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 #middle .bold {
   font-weight: bold;
   font-size: 1em;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 #middle .bolder {
   font-weight: bold;
@@ -497,17 +522,17 @@ img {
 .entrees, .plats, .desserts {
   cursor: pointer;
 }
-@media (min-width: 320px) {
-  .entrees, .plats, .desserts {
-    max-width: 300px;
-  }
-}
-@media (min-width: 378px) {
+@media (max-width: 321px) {
   .entrees, .plats, .desserts {
     max-width: 100%;
   }
 }
-@media (min-width: 414px) {
+@media (max-width: 378px) {
+  .entrees, .plats, .desserts {
+    max-width: 100%;
+  }
+}
+@media (max-width: 414px) {
   .entrees, .plats, .desserts {
     max-width: 100%;
   }
@@ -516,19 +541,18 @@ img {
   .entrees, .plats, .desserts {
     min-width: 30%;
     min-height: 90px;
+    width: 100%;
   }
 }
 
 .spacediv {
   width: 100%;
+  overflow: hidden;
   min-height: 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 8px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 @media (min-width: 1000px) {
   .spacediv {
@@ -542,8 +566,6 @@ img {
   box-shadow: 1px 1px 10px 1px #e2e2e2;
   margin: 10px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   display: flex;
   justify-content: space-between;
 }
@@ -554,8 +576,6 @@ img {
   box-shadow: 1px 1px 10px 1px #e2e2e2;
   margin: 10px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   display: flex;
   justify-content: space-between;
 }
@@ -615,7 +635,8 @@ img {
 }
 
 .check {
-  display: none;
+  width: 0px;
+  transition-duration: 1s;
   font-size: 1.5em;
 }
 .check i {
@@ -627,12 +648,9 @@ img {
 .entrees:hover .check {
   width: 90px;
   height: 51px;
-  animation: fadein;
-  animation-duration: 1s;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
-  transform-origin: right;
   border-radius: 0 20% 20% 0;
 }
 @media (max-width: 1000px) {
@@ -661,13 +679,15 @@ img {
 .plats:hover .check {
   width: 90px;
   height: 51px;
-  animation: fadein;
-  animation-duration: 1s;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
-  transform-origin: right;
   border-radius: 0 20% 20% 0;
+}
+@media (max-width: 1000px) {
+  .plats:hover .check {
+    width: 65px;
+  }
 }
 .plats:hover .check .rotation {
   display: flex;
@@ -690,13 +710,15 @@ img {
 .desserts:hover .check {
   width: 90px;
   height: 51px;
-  animation: fadein;
-  animation-duration: 1s;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
-  transform-origin: right;
   border-radius: 0 20% 20% 0;
+}
+@media (max-width: 1000px) {
+  .desserts:hover .check {
+    width: 65px;
+  }
 }
 .desserts:hover .check .rotation {
   display: flex;
