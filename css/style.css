@@ -495,7 +495,7 @@ img {
   bottom: 18px;
 }
 
-.card:hover .loves3 {
+.loveclcik:hover .loves3 {
   animation: fadeout2;
   opacity: 1;
   animation-duration: 0.5s;
@@ -608,11 +608,16 @@ img {
   padding: 15px 10px;
   text-align: center;
   text-decoration: none;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 #btnp2:hover {
   filter: brightness(1.1);
   box-shadow: 0px 0px 10px 5px gray;
+}
+@media (min-width: 1000px) {
+  #btnp2 {
+    margin-top: 150px;
+  }
 }
 
 #placement-btn {
