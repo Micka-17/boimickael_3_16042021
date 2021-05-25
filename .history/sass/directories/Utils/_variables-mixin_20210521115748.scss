@@ -1,0 +1,129 @@
+$color1: #9356DC;
+$color2: #FF79DA;
+$color3: #99E2D0;
+
+@mixin centre {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin capsule {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px rgb(226, 226, 226);
+    margin: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ @mixin spacediv {
+    min-height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+ }
+@mixin btn {
+    background: linear-gradient($color2, $color1);
+    border-radius: 50px;
+    border: none;
+    box-shadow: gray;
+    color: white;
+    font-weight: bold;
+    max-width: 200px;
+    min-width: 200px;
+    margin-top: 15px;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none
+}
+
+@keyframes fadein {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeout {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+@keyframes fadeout2 {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+ @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+        opacity: 10%;
+      }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes loader {
+    95% {
+    opacity: 10%;
+    }
+    85% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1000;
+    }
+}
+
+@keyframes loader2 {
+    0% {
+    opacity: 100%;
+    z-index: 9999;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1000;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1000;
+    }
+}
