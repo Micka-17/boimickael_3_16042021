@@ -41,9 +41,10 @@
     opacity: 1;
   }
 }
-@keyframes lds-dual-ring {
+@keyframes dual-ring {
   0% {
     transform: rotate(0deg);
+    opacity: 100%;
   }
   50% {
     transform: rotate(180deg);
@@ -51,18 +52,18 @@
   }
   100% {
     transform: rotate(360deg);
+    opacity: 100%;
   }
 }
 @keyframes loader {
-  95% {
-    opacity: 10%;
+  0% {
+    opacity: 100%;
   }
-  85% {
-    opacity: 50%;
+  99% {
+    opacity: 100%;
   }
   100% {
-    opacity: 0;
-    z-index: -1000;
+    opacity: 100%;
   }
 }
 @keyframes loader2 {
@@ -125,8 +126,9 @@ ul {
   background-color: #99E2D0;
   min-width: 100%;
   height: 100vh;
-  animation: loader2 5s;
+  animation: loader2 3s;
   animation-fill-mode: both;
+  animation-timing-function: step-end;
 }
 
 #loader {
@@ -141,7 +143,7 @@ ul {
   border-radius: 50%;
   border: 6px solid white;
   border-color: #9356DC transparent #FF79DA transparent;
-  animation: lds-dual-ring 0.8s infinite, loader 3s;
+  animation: dual-ring 0.8s infinite, loader 3s;
   animation-delay: 0.2s;
   animation-fill-mode: both;
 }
@@ -327,7 +329,7 @@ li #number3 {
 
 .nouveau {
   position: absolute;
-  padding: 1rem;
+  padding: 0.7rem;
   border-radius: 0.25rem;
   color: darkgreen;
   font-weight: bold;
@@ -491,8 +493,8 @@ img {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  right: 8px;
-  bottom: 18px;
+  right: 9px;
+  bottom: 8px;
 }
 
 .loveclcik:hover .loves3 {
@@ -524,7 +526,7 @@ img {
 }
 @media (max-width: 321px) {
   .entrees, .plats, .desserts {
-    max-width: 100%;
+    width: 300px;
   }
 }
 @media (max-width: 378px) {
@@ -630,6 +632,25 @@ img {
   position: absolute;
   top: 1151px;
   min-width: 100%;
+}
+
+@media (min-width: 430px) {
+  .end-ul {
+    max-width: 450px;
+  }
+}
+@media (min-width: 1000px) {
+  .end-ul {
+    display: flex;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.end-ul p {
+  margin: 8px;
 }
 
 .align-price {
