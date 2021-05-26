@@ -15,7 +15,9 @@ ul {
             justify-content: space-evenly;
         }
 }
-
+#container {
+    max-width: 1500px;
+}
 #backgroundloader {
     position: absolute;
     top: 0;
@@ -168,6 +170,9 @@ li { position: relative;
                     font-size: 0.8em;
                     color: white;
                 }
+}
+li:hover {
+    background-color: #9256dc36;
 }
 .space {
     margin-top: 10px;
