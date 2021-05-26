@@ -88,7 +88,7 @@
 }
 
 #margtitle {
-  font-family: Shrikhand;
+  font-family: Shrikhand, cursive;
   font-weight: 100;
   font-size: 1.2em;
 }
@@ -477,7 +477,7 @@ img {
   }
 }
 #middle p {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 #middle .loves1 {
   position: absolute;
