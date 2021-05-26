@@ -145,6 +145,24 @@ ul {
   animation-delay: 0.2s;
   animation-fill-mode: both;
 }
+@media (min-width: 320px) {
+  #loader {
+    top: 40%;
+    left: 40%;
+  }
+}
+@media (min-width: 375px) {
+  #loader {
+    top: 45%;
+    left: 45%;
+  }
+}
+@media (min-width: 820px) {
+  #loader {
+    top: 50%;
+    left: 50%;
+  }
+}
 
 #contact {
   color: white;
@@ -392,7 +410,7 @@ footer .icon-footer {
 }
 
 .img-top {
-  min-width: 100%;
+  width: 100%;
   max-height: 510px;
 }
 
