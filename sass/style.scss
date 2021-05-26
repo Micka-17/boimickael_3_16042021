@@ -12,10 +12,11 @@ ul {
         @media (min-width: 1000px) {
             display: flex;
             min-width: 100%;
+            justify-content: space-evenly;
         }
 }
 
-#backgroundloader {
+/*#backgroundloader {
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +43,7 @@ ul {
     animation-delay: 0.2s;
     animation-fill-mode: both;
   }
-
+*/
 #contact {
     color: white;
 }
@@ -84,8 +85,8 @@ ul {
         #btn {
             @include btn();
                 &:hover {
-                    filter: brightness(1.10);
-                    box-shadow: 0px 0px 10px 5px gray;
+                    filter: brightness(1.50);
+                    box-shadow: 0px 0px 10px 15px gray;
                 }
         }
 }
@@ -120,80 +121,72 @@ ul {
     background-color: #9256dc36;
 }
 
-li {
+li { position: relative;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 18px;
     margin: 18px;
     margin-left: 25px;
     box-shadow: 1px 1px 10px 1px rgb(151, 145, 145);
+    min-width: 20%;
         #number1 {
             position: absolute;
-            top: 462px; 
-            left: 10px;
+            top: 15px; 
+            left: -14px;
             background-color: $color1;
             border-radius: 50px;
             padding: 6px 10px;
             font-size: 0.8em;
             color: white;
-                @media (min-width: 1000px) {
-                    top: 472px; 
-                    left: 10px;
-                }
         }
             #number2 {
                 position: absolute;
-                top: 534px; 
-                left: 10px;
+                top: 14px; 
+                left: -15px;
                 background-color: $color1;
                 border-radius: 50px;
                 padding: 6px 10px;
                 font-size: 0.8em;
                 color: white;
-                    @media (min-width: 1000px) {
-                        top: 472px; 
-                        left: 285px;
-                    }
             }  
                 #number3 {
                     position: absolute;
-                    top: 607px;
-                    left: 10px;
+                    top: 14px; 
+                    left: -15px;
                     background-color: $color1;
                     border-radius: 50px;
                     padding: 6px 10px;
                     font-size: 0.8em;
                     color: white;
-                        @media (min-width: 1000px) {
-                            top: 472px;
-                            left: 553px;
-                        }
                 }
 }
-
+.space {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .card {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 0px;
-    margin: 8px;
+    margin: 18px;
     box-shadow: 1px 1px 10px 1px rgb(151, 145, 145);
-        @media (min-width: 375px) { 
-            min-width: 350px;
-        }
+    max-width: 100%;
 }
-
 .imga {
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
-    min-width: 280px;
-    max-height: 140px;
-    min-height: 140px;
-    @media (min-width: 375px) { 
-        min-width: 100%;
-    }
-    @media (min-width: 414px) { 
-        min-width: 100%;
-    }
+    width: 650px;
+    height: 350px; 
+        @media (max-width:900px) {
+            max-width: 100%;
+        }
+            @media (max-width:500px) {
+                max-width: 100%;
+                height: 240px; 
+            }
+                @media (max-width:380px) {
+                    height: 220px; 
+                }
 }
 .card {
     position: relative;
@@ -218,6 +211,7 @@ li {
     display: flex;
     flex-direction: column;
     place-items: center;
+    flex-wrap: wrap;
         .resto {
             display: flex;
             justify-content: space-between;
@@ -229,6 +223,11 @@ li {
                 flex-direction: row;
                 justify-content: center;
             }
+                @media (min-width: 1350px) {
+                    display: grid;
+                    grid-template-rows: 50% 50%;
+                    grid-template-columns: 50% 50%;
+                }
 }
 
 
@@ -284,7 +283,6 @@ footer {
 }
 img {
     object-fit: cover;
-    max-width: 320px;
 }
 .titlemargall {
     margin-top: 30px;
@@ -354,7 +352,7 @@ img {
     -webkit-text-fill-color: transparent;
     position: absolute;
     right: 9px;
-    bottom: 8px;
+    bottom: 18px;
 }
 .loveclcik:hover .loves3 {
     animation: fadeout2;
@@ -391,7 +389,6 @@ img {
             max-width: 100%;
         }
         @media (min-width: 1000px) {
-            min-width: 30%;
             min-height: 90px;
             width: 100%;
         }
@@ -425,7 +422,6 @@ img {
     @media (min-width: 1000px) {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
     }
 }
 
@@ -433,8 +429,8 @@ img {
     @include btn();
     margin-top: 40px;
         &:hover {
-            filter: brightness(1.10);
-            box-shadow: 0px 0px 10px 5px gray;
+            filter: brightness(1.50);
+            box-shadow: 0px 0px 10px 15px gray;
         }
          @media (min-width: 1000px) {
             margin-top: 150px;
@@ -453,6 +449,11 @@ img {
     min-width: 100%;
 }
 
+.end {
+    position: absolute;
+    min-width: 100%;
+}
+
 .end-ul { 
         @media (min-width: 430px) {
         max-width: 450px;
@@ -467,6 +468,7 @@ img {
 
 .end-ul p {
     margin: 8px;
+    margin-left: 20px;
 }
 
 //page la note enchantee
@@ -570,5 +572,4 @@ img {
                         border-radius: 0 10% 10% 0;
                     }
 }
-
 
