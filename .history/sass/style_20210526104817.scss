@@ -1,0 +1,575 @@
+@import "./directories/Utils/variables-mixin";
+@import "./directories/Base/main.scss";
+
+
+
+ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    @media (min-width: 430px) {
+        max-width: 450px;
+    }
+        @media (min-width: 1000px) {
+            display: flex;
+            min-width: 100%;
+            justify-content: space-evenly;
+        }
+}
+
+#backgroundloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color3;
+    max-width: 100%;
+    height: 100%;  
+    animation: loader2 33s;
+    animation-fill-mode: both;
+    animation-timing-function: step-end;
+  }
+#loader {
+    position: absolute;
+    height: 70px;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 6px solid rgb(255, 255, 255);
+    border-color: $color1 transparent $color2 transparent;
+    animation: dual-ring 0.8s infinite, loader 3s;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+  }
+
+#contact {
+    color: white;
+}
+
+.spacediv p {
+    font-family: 'Roboto', sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#paris {
+    display: flex;
+    justify-content: center;
+    border-top: solid 3px rgba(128, 128, 128, 0.301);
+    min-width: 321px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(128, 128, 128, 0.212);
+        .icon {
+            margin-right: 10px;
+        }
+}
+
+#reservation {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;
+    background-color: rgb(238, 234, 234);
+    padding-bottom: 45px;
+        #btn {
+            @include btn();
+                &:hover {
+                    filter: brightness(1.50);
+                    box-shadow: 0px 0px 10px 15px gray;
+                }
+        }
+}
+
+#center-top1 {
+    text-align: center;
+    margin-top: 20px;
+    max-width: 350px;
+}
+
+#center-top2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 350px;
+}
+
+
+.icon-top {
+    color: gray;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.icon-top-purple {
+    color: $color1;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+#li-3 {
+    background-color: #9256dc36;
+}
+
+li { position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 18px;
+    margin-left: 25px;
+    box-shadow: 1px 1px 10px 1px rgb(151, 145, 145);
+    min-width: 20%;
+        #number1 {
+            position: absolute;
+            top: 15px; 
+            left: -14px;
+            background-color: $color1;
+            border-radius: 50px;
+            padding: 6px 10px;
+            font-size: 0.8em;
+            color: white;
+        }
+            #number2 {
+                position: absolute;
+                top: 14px; 
+                left: -15px;
+                background-color: $color1;
+                border-radius: 50px;
+                padding: 6px 10px;
+                font-size: 0.8em;
+                color: white;
+            }  
+                #number3 {
+                    position: absolute;
+                    top: 14px; 
+                    left: -15px;
+                    background-color: $color1;
+                    border-radius: 50px;
+                    padding: 6px 10px;
+                    font-size: 0.8em;
+                    color: white;
+                }
+}
+.space {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 18px;
+    box-shadow: 1px 1px 10px 1px rgb(151, 145, 145);
+    max-width: 100%;
+}
+.imga {
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+    width: 650px;
+    height: 350px; 
+        @media (max-width:900px) {
+            max-width: 100%;
+        }
+            @media (max-width:500px) {
+                max-width: 100%;
+                height: 240px; 
+            }
+                @media (max-width:380px) {
+                    height: 220px; 
+                }
+}
+.card {
+    position: relative;
+}
+.nouveau {
+    position: absolute;
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    color: darkgreen;
+    font-weight: bold;
+    right: 10px;
+    top: 10px;
+    background-color: #99e2d0;
+}
+
+.h3s {
+    margin: 40px 0px 10px 20px;
+
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    flex-wrap: wrap;
+        .resto {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px;
+        }
+            @media (min-width: 630px) {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+            }
+                @media (min-width: 1350px) {
+                    display: grid;
+                    grid-template-rows: 50% 50%;
+                    grid-template-columns: 50% 50%;
+                }
+}
+
+
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+        #logo-white {
+            font-family: 'Shrikhand', cursive;
+            font-weight: 300;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+            li {
+                background-color: transparent;
+                border-radius: 0;
+                padding: 5px;
+                margin-left: 20px;
+                box-shadow: none;
+                display: flex; 
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+                .icon-footer {
+                    max-width: 2px;
+                    max-height: 2px;
+                    margin-right: 25px;
+                }
+                    @media (min-width:1000px) {
+                        padding: 40px;
+                    }
+}
+
+
+//pages 2
+
+.img-top {
+    min-width: 100%;
+    max-height: 510px;
+}
+
+.arrow {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    color: rgba(0, 0, 0, 0.801);
+}
+#margtitle {
+    margin-left: 15px;
+    max-width: 220px;
+}
+img {
+    object-fit: cover;
+}
+.titlemargall {
+    margin-top: 30px;
+    margin-left: 15px;
+    border-bottom: solid rgba(55, 224, 55, 0.541);
+    max-width: 30px;
+}
+#middle {
+    position: absolute;
+    top: 240px;
+    min-width: 100%;
+    min-height: 980px;
+    background-color: rgb(231, 229, 229);
+    border-radius: 20px 20px 0px 0;
+    padding-top: 30px;  
+     .entrees {
+        @include centre();
+        @include capsule();
+     }
+        .bold {
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .bolder {
+            font-weight: bold;
+            font-size: 0.6m;
+                @media (min-width: 1000px) {
+                    margin: 15px;
+                }
+        }
+            p {
+                font-size: 0.7em;
+            }
+                .loves1 {
+                    position: absolute;
+                    right: 15px;
+                    color: gray
+                }
+}
+
+.loves2 {
+    display: none;
+    opacity: 0;
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    right: 15px;
+}
+#margtitle:hover .loves2 {
+    animation: fadeout;
+    opacity: 1;
+    animation-duration: .5s;
+    display: inline-block;
+    justify-content: center;   
+}
+
+.loves3 {
+    display: none;
+    opacity: 0;
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    right: 9px;
+    bottom: 18px;
+}
+.loveclcik:hover .loves3 {
+    animation: fadeout2;
+    opacity: 1;
+    animation-duration: .5s;
+    display: inline-block;
+    justify-content: center;   
+    font-size: 1.5em;
+}
+
+#entrees {
+    animation: slideup 1s;
+    animation-duration: 1s;
+}
+#plats {
+    animation: slideup 1s;
+    animation-duration: 5s;
+}
+#desserts {
+    animation: slideup 1s;
+    animation-duration: 8s;
+}
+
+
+.entrees, .plats, .desserts {
+    cursor: pointer;
+        @media (max-width:321px) {
+            width: 300px;
+        }
+        @media (max-width:378px) {
+            max-width: 100%;
+        }
+        @media (max-width:414px) {
+            max-width: 100%;
+        }
+        @media (min-width: 1000px) {
+            min-height: 90px;
+            width: 100%;
+        }
+}
+
+.spacediv {
+    width: 100%;
+    overflow: hidden;
+    @include spacediv();
+        @media (min-width: 1000px) {
+            justify-content: space-evenly;
+        }
+}
+.plats {
+    @include capsule();
+    @include centre();
+}
+.desserts {
+    @include capsule();
+    @include centre();
+}
+
+.responsive {
+    @media (min-width: 1000px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.responsive-entrees {
+    @media (min-width: 1000px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#btnp2 {
+    @include btn();
+    margin-top: 40px;
+        &:hover {
+            filter: brightness(1.50);
+            box-shadow: 0px 0px 10px 15px gray;
+        }
+         @media (min-width: 1000px) {
+            margin-top: 150px;
+         }
+}
+
+#placement-btn {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.end1 {
+    position: absolute;
+    top: 1151px;
+    min-width: 100%;
+}
+
+.end {
+    position: absolute;
+    min-width: 100%;
+}
+
+.end-ul { 
+        @media (min-width: 430px) {
+        max-width: 450px;
+    }
+        @media (min-width: 1000px) {
+            display: flex;
+            min-width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+}
+
+.end-ul p {
+    margin: 8px;
+    margin-left: 20px;
+}
+
+//page la note enchantee
+
+ .align-price{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.check {
+    width: 0px;
+    transition-duration: 1s;
+    font-size: 1.5em;
+     & i {
+        display: none;
+        place-items: center;
+        color: white;
+     }
+}
+
+.entrees:hover .check {
+    width: 90px;
+    height: 51px;
+    background-color: $color3;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 20% 20% 0;
+        @media (max-width: 1000px) {
+            width: 65px;
+        }
+            & .rotation {
+                display: flex;
+                place-items: center;
+            }
+                & .rond {
+                    display: flex;
+                    place-items: center;
+                    transform-origin: center;
+                    animation: spin;
+                    animation-duration: 1s;
+                }
+                    @media (min-width: 1000px) {
+                        height: 90px;
+                        border-radius: 0 10% 10% 0;
+                    }
+}
+
+
+.plats:hover .check {
+    width: 90px;
+    height: 51px;
+    background-color: $color3;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 20% 20% 0;
+        @media (max-width: 1000px) {
+            width: 65px;
+        }
+            & .rotation {
+                display: flex;
+                place-items: center;
+            }
+                & .rond {
+                    display: flex;
+                    place-items: center;
+                    transform-origin: center;
+                    animation: spin;
+                    animation-duration: 1s;
+                }
+                    @media (min-width: 1000px) {
+                        height: 90px;
+                        border-radius: 0 10% 10% 0;
+                    }
+}
+
+.desserts:hover .check {
+    width: 90px;
+    height: 51px;
+    background-color: $color3;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 20% 20% 0;
+        @media (max-width: 1000px) {
+            width: 65px;
+        }
+            & .rotation {
+                display: flex;
+                place-items: center;
+            }
+                & .rond {
+                    display: flex;
+                    place-items: center;
+                    transform-origin: center;
+                    animation: spin;
+                    animation-duration: 1s;
+                }
+                    @media (min-width: 1000px) {
+                        height: 90px;
+                        border-radius: 0 10% 10% 0;
+                    }
+}
+
