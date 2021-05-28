@@ -444,6 +444,7 @@ img {
   background-color: #e7e5e5;
   border-radius: 20px 20px 0px 0;
   padding-top: 30px;
+  max-width: 100%;
 }
 #middle .entrees {
   display: flex;
@@ -453,6 +454,11 @@ img {
   box-shadow: 1px 1px 10px 1px #e2e2e2;
   margin: 10px;
   overflow: hidden;
+}
+@media (max-width: 386px) {
+  #middle .entrees {
+    max-width: 100%;
+  }
 }
 #middle .bold {
   font-weight: bold;
@@ -474,6 +480,10 @@ img {
   position: absolute;
   right: 15px;
   color: gray;
+}
+
+#center {
+  max-width: 100%;
 }
 
 .loves2 {
@@ -536,19 +546,9 @@ img {
 .entrees, .plats, .desserts {
   cursor: pointer;
 }
-@media (max-width: 330px) {
-  .entrees, .plats, .desserts {
-    width: 300px;
-  }
-}
-@media (max-width: 360px) {
-  .entrees, .plats, .desserts {
-    width: 335px;
-  }
-}
 @media (max-width: 375px) {
   .entrees, .plats, .desserts {
-    width: 355px;
+    max-width: 100%;
   }
 }
 @media (max-width: 414px) {

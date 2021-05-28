@@ -303,13 +303,9 @@ img {
     background-color: rgb(231, 229, 229);
     border-radius: 20px 20px 0px 0;
     padding-top: 30px;  
-    max-width: 100%;
      .entrees {
         @include centre();
         @include capsule();
-            @media (max-width:386px) {
-                max-width: 100%;
-            }
      }
         .bold {
             font-weight: bold;
@@ -331,9 +327,7 @@ img {
                     color: gray
                 }
 }
- #center {
-    max-width: 100%;
- }
+
 .loves2 {
     display: none;
     opacity: 0;
@@ -390,6 +384,7 @@ img {
 
 .entrees, .plats, .desserts {
     cursor: pointer;
+   
     @media (max-width:375px) {
         max-width: 100%;
     }
