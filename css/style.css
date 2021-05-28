@@ -397,16 +397,6 @@ footer #logo-white {
   margin-left: 20px;
   margin-top: 10px;
 }
-footer li {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 5px;
-  margin-left: 20px;
-  box-shadow: none;
-  display: flex;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
 footer .icon-footer {
   max-width: 2px;
   max-height: 2px;
@@ -546,14 +536,19 @@ img {
 .entrees, .plats, .desserts {
   cursor: pointer;
 }
-@media (max-width: 321px) {
+@media (max-width: 330px) {
   .entrees, .plats, .desserts {
     width: 300px;
   }
 }
-@media (max-width: 378px) {
+@media (max-width: 360px) {
   .entrees, .plats, .desserts {
-    max-width: 100%;
+    width: 335px;
+  }
+}
+@media (max-width: 375px) {
+  .entrees, .plats, .desserts {
+    width: 355px;
   }
 }
 @media (max-width: 414px) {

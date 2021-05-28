@@ -385,13 +385,10 @@ img {
 .entrees, .plats, .desserts {
     cursor: pointer;
         @media (max-width:330px) {
-            width: 300px;
+            max-width: 100px;
         }
-        @media (max-width:360px) {
-            width: 335px;
-        }
-        @media (max-width:375px) {
-            width: 355px;
+        @media (max-width:378px) {
+            max-width: 100%;
         }
         @media (max-width:414px) {
             max-width: 100%;

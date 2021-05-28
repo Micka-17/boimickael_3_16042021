@@ -384,14 +384,9 @@ img {
 
 .entrees, .plats, .desserts {
     cursor: pointer;
-        @media (max-width:330px) {
-            width: 300px;
-        }
-        @media (max-width:360px) {
-            width: 335px;
-        }
-        @media (max-width:375px) {
-            width: 355px;
+    http://127.0.0.1:5500/pages/le_delice_des_sens.html
+        @media (max-width:378px) {
+            max-width: 100%;
         }
         @media (max-width:414px) {
             max-width: 100%;
