@@ -332,6 +332,7 @@ img {
     display: none;
     opacity: 0;
     background: linear-gradient(0deg,#9356dc,#ff79da);
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -351,6 +352,7 @@ img {
     display: none;
     opacity: 0;
     background: linear-gradient(0deg,#9356dc,#ff79da);
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
