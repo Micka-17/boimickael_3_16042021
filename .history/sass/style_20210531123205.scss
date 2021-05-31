@@ -123,9 +123,12 @@ ul {
     margin-left: 10px;
 }
 
-li:hover .icon-top {
-        color: $color1;
+.icon-top-purple {
+    color: $color1;
+    margin-right: 15px;
+    margin-left: 10px;
 }
+
 
 li { position: relative;
     background-color: #ffffff;

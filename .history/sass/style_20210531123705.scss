@@ -123,8 +123,9 @@ ul {
     margin-left: 10px;
 }
 
-li:hover .icon-top {
-        color: $color1;
+.li:hover .icon-top {
+        &:hover { color: $color1;
+    }
 }
 
 li { position: relative;

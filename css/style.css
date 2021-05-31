@@ -246,14 +246,8 @@ ul {
   margin-left: 10px;
 }
 
-.icon-top-purple {
+li:hover .icon-top {
   color: #9356DC;
-  margin-right: 15px;
-  margin-left: 10px;
-}
-
-#li-3 {
-  background-color: #9256dc36;
 }
 
 li {
